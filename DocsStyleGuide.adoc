@@ -8,10 +8,16 @@ This is a living document. You are encouraged to comment on and contribute to it
 [[grammar]]
 == Grammar
 
-=== Oxford Comma
-
+Oxford comma::
 Place a comma before _and_ and _or_ at the end of a series of items.
 Use it, embrace it, and love it.
+
+Compound modifiers::
+link:https://en.wikipedia.org/wiki/Compound_modifier[Compound modifiers] should be hyphenated to avoid confusion.
+So “code that is open source” is “open-source code”.
+
+=== Compound Modifiers
+
 
 [[formatting]]
 == Formatting
@@ -293,6 +299,8 @@ Hadoop:: _Apache Hadoop_ on first mention. Use _Hadoop_ to convey introductory m
 large scale / large-scale:: Only and always hyphenate as a modifier, ex: “large-scale operation”, but “operating on a large scale”.
 
 NameNode:: Always camel case in the Hadoop context.
+
+open source / open-source:: Some “code is open source”, which makes it “open-source code”.
 
 real time / real-time:: Unhyphenated as an object, ex: “carried out in real time”, hyphenated as a modifier “a real-time processor”. Never _realtime_.
 
