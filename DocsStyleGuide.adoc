@@ -40,7 +40,7 @@ But they also won't require arbitrary breaks at line 80 or 90, which forces manu
 This method works best if you use an editor that enables a hanging indent, so each new sentence starts flush with the left margin.
 Yet each subsequent line the sentence soft-wraps onto indents one space from the margin.
 
-image::assets/images/docs-style-hanging-indent.png[]
+image::assets/images/docs-style-hanging-indent.png[width="400"]
 
 If you are unconvinced, link:https://asciidoctor.org/docs/asciidoc-recommended-practices/#one-sentence-per-line[read this].
 
