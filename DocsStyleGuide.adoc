@@ -103,7 +103,7 @@ In Markdown, format numbers like so:
    This helps when you need to rearrange steps in the future, so you won't have to manually renumber.
 1. Demonstrate commands and code listings with examples.
    ```shell
-   echo "Shell commands always start with \`\`\`shell notation"
+   echo "Shell commands always start with triple-backtick notation followed by the word shell"
    echo "Note the 3 spaces, adhering this listing to the associated step."
    ```
 1. Illustrate relevant steps with screenshots.
@@ -122,7 +122,7 @@ This helps when you need to rearrange steps in the future, so you won't have to 
 . Demonstrate commands and code listings with examples.
 +
 [source,shell]
-echo "Shell commands always start with ```shell notation"
+echo "Shell commands always start with triple-backtick notation followed by the word shell"
 echo "Note the 3 spaces, adhering this listing to the associated step."
 
 . Illustrate relevant steps with screenshots.
@@ -130,13 +130,15 @@ echo "Note the 3 spaces, adhering this listing to the associated step."
 image::assets/images/docs-style-instruction-steps.png[]
 ====
 
+
+
 ==== Conditional Instructions
 
 When indicating that an instruction or description applies only under certin circumstances, place an _if_ statement at the front of the sentence and emphasize it with italics.
 
 .Conditional description
 ====
-2. _If you have ALL access on a particular object (database or dataset)_, in the Okera UI, you have access to its admin features.
+\2. _If you have ALL access on a particular object_ in the Okera UI, you have access to its admin features.
 ====
 
 ==== Goal-prompted instructions
