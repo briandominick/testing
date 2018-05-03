@@ -1,4 +1,5 @@
-# Technical Documentation Style Guide
+= Technical Documentation Style Guide
+:toc: preamble
 
 When documenting technical specifications and instructions for public presentation (and to a great extent for internal use, as well), clarity and consistency are imperative. Toward this end, this Style Guide can be used to standardize and elucidate terms and documentary concepts.
 
@@ -216,6 +217,8 @@ Except Pip or Curl at the beginning of a sentence or in a heading.
 
 In any document, the first local appearance of a third-party product should include its maker, e.g., Apache Hive.
 
+See <<terms-and-components>> for explicit listings regarding spelling and contextualization of commonly used proper nouns.
+
 == Structure
 
 === Titles & Headings
@@ -256,19 +259,6 @@ The output is set up to render these as admonition blocks, something like:
 A longer admonition.
 Note the lack of a colon and the extra line.
 ====
-
-=== Examples and Code Listings
-
-Offer example code as often as possible.
-Rather than including a description of or introduction to an example in the preceding paragraph, place it in a title line for the example, like so:
-
-[source,markdown]
-----
-**Example:** A code listing that will demonstrate examples
-```shell
-echo "This is for you to see how to make a code listing with an example heading."
-```
-----
 
 [[terms-and-components]]
 == Terms and Components
@@ -318,10 +308,6 @@ third party / third-party:: Only and always hyphenate as a modifier, ex: “thir
 
 ZooKeeper:: _Apache ZooKeeper_ on first mention. Always upper camelcase except in literals.
 
-=== A Note on Capitalizations
-
-Proper nouns above
-
 === Special Terms
 
 ==== Hosts, Nodes, and More
@@ -362,7 +348,18 @@ A command-line interface involves carefully named elements, starting with.
 prompt$ command --option argument
 ----
 
-=== Shell Command Listings
+=== Examples and Code Listings
+
+Offer example code as often as possible.
+Rather than including a description of or introduction to an example in the preceding paragraph, place it in a title line for the example, like so:
+
+[source,markdown]
+----
+**Example:** A code listing that will demonstrate examples
+```shell
+echo "This is for you to see how to make a code listing with an example heading."
+```
+----
 
 Shell commands are displayed Markdown like so:
 
