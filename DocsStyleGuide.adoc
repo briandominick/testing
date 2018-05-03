@@ -260,6 +260,81 @@ Note the lack of a colon and the extra line.
 Admonitions can be `**Note:**`, `**Tip:**`, or `**Warning:**`.
 Each will be rendered in its own style to stand out from the page.
 
+=== Examples and Code Listings
+
+Offer example code as often as possible.
+Rather than including a description of or introduction to an example in the preceding paragraph, place it in a title line for the example, like so:
+
+[source,markdown]
+----
+**Example:** A code listing that will demonstrate examples
+```shell
+echo "This is for you to see how to make a code listing with an example heading."
+```
+----
+
+==== CLI Listing Format
+
+A command-line interface involves carefully named elements, starting with.
+[source,shell]
+----
+prompt$ command --option argument
+----
+
+Shell commands are displayed Markdown like so:
+
+[source,markdown]
+---
+```shell
+command --option argument
+```
+---
+
+When the listing is an example, make this explicit with `**Example:**` prepending a short description of the conents.
+For example...
+
+[source,markdown]
+----
+**Example:** Creating views with an explicit partitioning clause
+```sql
+CREATE VIEW v as SELECT ... FROM base_tbl
+PARTITIONED BY c1
+```
+----
+
+Include a command prompt when it is relevant, especially outside the Bash or standard shell environment.
+Also use the `$` command prompt symbol for Bash commands on pages mixed shells/environments.
+
+[source,markdown]
+----
+```shell
+$ ./presto --server localhost:8080 --catalog hive --schema default
+presto> show catalogs;
+```
+----
+
+Use `\` to wrap long lines in descriptive command templates containing placeholder tokens, where we want users to see the whole command without scrolling horizontally.
+
+[source,markdown]
+----
+```shell
+cerebro_cli clusters update \
+ --terminationProtectionEnabled=<true|false> <cluster_id>
+```
+----
+
+For actual commands or expressed examples (without placeholder tokens), leave commands to one line:
+
+[source,markdown]
+----
+```shell
+cerebro_cli clusters update --terminationProtectionEnabled=true 5
+```
+----
+
+When rendered for Web, this will scroll horizontally.
+
+
 [[terms-and-components]]
 == Terms and Components
 
@@ -355,77 +430,3 @@ Here are some terms that should typically conform as written.
 * EC2 _instance_
 * Deployment Manager _node_
 * Catalog _service_
-
-=== Examples and Code Listings
-
-Offer example code as often as possible.
-Rather than including a description of or introduction to an example in the preceding paragraph, place it in a title line for the example, like so:
-
-[source,markdown]
-----
-**Example:** A code listing that will demonstrate examples
-```shell
-echo "This is for you to see how to make a code listing with an example heading."
-```
-----
-
-==== CLI Listing Format
-
-A command-line interface involves carefully named elements, starting with.
-[source,shell]
-----
-prompt$ command --option argument
-----
-
-Shell commands are displayed Markdown like so:
-
-[source,markdown]
----
-```shell
-command --option argument
-```
----
-
-When the listing is an example, make this explicit with `**Example:**` prepending a short description of the conents.
-For example...
-
-[source,markdown]
-----
-**Example:** Creating views with an explicit partitioning clause
-```sql
-CREATE VIEW v as SELECT ... FROM base_tbl
-PARTITIONED BY c1
-```
-----
-
-Include a command prompt when it is relevant, especially outside the Bash or standard shell environment.
-Also use the `$` command prompt symbol for Bash commands on pages mixed shells/environments.
-
-[source,markdown]
-----
-```shell
-$ ./presto --server localhost:8080 --catalog hive --schema default
-presto> show catalogs;
-```
-----
-
-Use `\` to wrap long lines in descriptive command templates containing placeholder tokens, where we want users to see the whole command without scrolling horizontally.
-
-[source,markdown]
-----
-```shell
-cerebro_cli clusters update \
- --terminationProtectionEnabled=<true|false> <cluster_id>
-```
-----
-
-For actual commands or expressed examples (without placeholder tokens), leave commands to one line:
-
-[source,markdown]
-----
-```shell
-cerebro_cli clusters update --terminationProtectionEnabled=true 5
-```
-----
-
-When rendered for Web, this will scroll horizontally.
