@@ -70,6 +70,8 @@ One exception to this rule is *screen representations*, such as form-field label
 In the *Site URL* field, enter the fully qualified website address (ex: `http://cerebrodata.com`).
 ====
 
+See <<interface-elements>> for more on these representations.
+
 Outside of specific instructions or code examples, *element types* and *data types* are also not to be treated as literals.
 They are typically relayed in normal font.
 
@@ -130,7 +132,7 @@ echo "Note the 3 spaces, adhering this listing to the associated step."
 image::assets/images/docs-style-instruction-steps.png[]
 ====
 
-
+See <<examples-and-code-listings>> for more about formatting.
 
 ==== Conditional Instructions
 
@@ -138,12 +140,13 @@ When indicating that an instruction or description applies only under certin cir
 
 .Conditional description
 ====
-\2. _If you have ALL access on a particular object_ in the Okera UI, you have access to its admin features.
+2. _If you have ALL access on a particular object_ in the Okera UI, you have access to its admin features.
 ====
 
 ==== Goal-prompted instructions
 
-Similarly to conditions, always place _in order to_ statements up front (though don't use _in order_).
+Similarly to conditions, always place _in order to_ statements up front, this time without italics.
+Let the user know what they're about to do before telling them to do it.
 
 .Instruction preceded by a goal statement
 ====
@@ -154,27 +157,25 @@ If the goal of an instruction is not relevant, leave it out.
 If the explanation is informative but not critical, make it a separate sentence, following any code listings or examples.
 
 .Instruction followed by a goal explanation
-====
-. Extract the DeploymentManager tarball.
+[]
+----
+1. Extract the Deployment Manager tarball.
    ```shell
    sudo mkdir -p /opt/cerebro && cd /opt/cerebro
    ```
    This command changes your pwd to the new directory.
-====
-
-Notice how example code is indented with 3 spaces.
-This has the effect of
+----
 
 === Interface Elements
 
 Labels of items in user interfaces are typically bolded in docs.
 The case should generally match that of the label it is referencing, unless the label is all caps in the UI, in which case change it to initial caps to avoid being obnoxious.
-Do not bold or capitalize the interface element type associated with the label, even thoughthis is technically improper syntax for named nouns.
+Do not bold or capitalize the interface element type associated with the label, even though this is technically improper syntax for named nouns.
 For instance: the *Access* tab; not: the *Access* Tab; and not: the *Access tab*.
 
 .Bold to emphasize the name of a page name
 ====
-After logging in, you land on the *Home* page
+After logging in, you land on the *Home* page.
 ====
 
 === Emphasis in Text
@@ -206,9 +207,9 @@ Your credentials are saved in the browser until either your _token expires_, or 
 [[proper-nouns]]
 === Proper Nouns
 
-Third-party products and packages (ex: “Spark”, “HDFS”, “Kubernetes”) are capitalized, except as part of a technical element that is obviously a literal, such as settings, files, or directories named after them, or their corresponding system user. Ex: “the `hdfs` user”.
+Third-party products and packages (ex: “Spark”, “HDFS”, “Kubernetes”) are capitalized, except as part of a technical element that is obviously a literal, such as settings, files, or directories named after them, or their corresponding UNIX/system user. Ex: “the `hdfs` user”.
 
-The **other exception** to this capitalization rule for products and packages is small packages for languages like Python, JavaScript, and Ruby, which are notiriously lowercased.
+The **other exception** to this capitalization rule for products and packages is small packages for languages like Go, Python, JavaScript, and Ruby, which are notiriously lowercased.
 Favor the peculiarities of the package authors, to the best of your availability, and do not literalize lowercased packages.
 So, pip will always be pip (never `pip`), curl will be curl, and PyPA always PyPA.
 Except Pip or Curl at the beginning of a sentence or in a heading.
@@ -221,7 +222,7 @@ In any document, the first local appearance of a third-party product should incl
 
 Titles and section headings are title case.
 
-Block headings are sentence case.
+Block headings, such as example titles (required) or admonition titles (optional) are sentence case.
 
 Captions are complete sentences in sentence case.
 
@@ -247,12 +248,27 @@ Admonitions can be `**Note:**`, `**Tip:**`, or `**Warning:**`.
 Each will be rendered in its own style to stand out from the page.
 
 The output is set up to render these as admonition blocks, something like:
+
+.Example admonition
 ====
 [WARNING]
 .Warning
 A longer admonition.
 Note the lack of a colon and the extra line.
 ====
+
+=== Examples and Code Listings
+
+Offer example code as often as possible.
+Rather than including a description of or introduction to an example in the preceding paragraph, place it in a title line for the example, like so:
+
+[source,markdown]
+----
+**Example:** A code listing that will demonstrate examples
+```shell
+echo "This is for you to see how to make a code listing with an example heading."
+```
+----
 
 [[terms-and-components]]
 == Terms and Components
