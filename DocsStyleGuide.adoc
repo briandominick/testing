@@ -42,6 +42,8 @@ Yet each subsequent line the sentence soft-wraps onto indents one space from the
 
 image::assets/images/docs-style-hanging-indent.png[]
 
+If you are unconvinced, link:https://asciidoctor.org/docs/asciidoc-recommended-practices/#one-sentence-per-line[read this].
+
 [[literals]]
 === Literals
 
@@ -264,29 +266,41 @@ The output is set up to render these as admonition blocks, something like:
 .Warning
 A longer admonition.
 Note the lack of a colon and the extra line.
+
 ====
 
 [[terms-and-components]]
 == Terms and Components
 
-The following glossary standardizes word usage across Rocana documentation. Please use it when writing or editing technical docs. Styles in use for marketing copy may vary.
+The following glossary standardizes word usage across Okera documentation.
+Please use it when writing or editing technical docs.
+Styles in use for marketing copy may vary.
 
 === Okera Components
 
 [.dl-horizontal.glossary]
-OAuth:: The authentication standard.
-
-ODAS, Okera Data Access Service:: Never _the ODAS_ or _the Okera Data Access Service_. Never _ODAS service_ (refer to the running service by its process namespace or _ODAS daemon_ to indicate we're talking a literal Linux service).
+Okera Active Data Access Platform:: The proper, complete name of our product suite.
 
 Okera Catalog, the Catalog:: Never _the Okera Catalog_, and never lowercase when referring to the component.
 
+ODAS, Okera Data Access Service:: Never _the ODAS_ or _the Okera Data Access Service_. Never _ODAS service_ (refer to the running service by its process namespace like _`odas` service_ or else _ODAS daemon_ to indicate you're talking a literal Linux service, not just the functionality provided by ODAS).
+
+Okera Portal:: The Okera web application, formally _WebUI_ or _Web UI_.
+
+=== General Terms
+
+[.dl-horizontal.glossary]
 CDH:: CDH is Cloudera’s Hadoop distribution. See also, _Hadoop_.
+_Cloudera CDH_ on first mention.
 
 cluster-local:: Always hyphenated, referring to network connections and environments that treat clustered nodes as local.
 
-comma-separated:: Always hyphenated, preferabl to _comma-delimited_.
+comma-separated:: Always hyphenated, preferable to _comma-delimited_.
 
-config vs configuration:: A _config_ is an actual configuration file or a reference to a given system's specific configuration definition. _Configuration_ is the act of defining a aystem's setup. Example (that you'd never actually write): “Configuration is defined by the config, `settings.xml`.” Do not use _configs_ interchangably with settings; _configs_ implies multiple configuration files.
+config vs configuration:: A _config_ is an actual configuration file or a reference to a given system's specific configuration definition.
+_Configuration_ is the act of defining a aystem's setup.
+Example (that you'd never actually write): “Configuration is defined by the config, `settings.xml`.”
+Do not use _configs_ interchangably with settings; _configs_ implies multiple configuration files.
 
 DataNode:: Always camel case in the Hadoop context.
 
@@ -294,11 +308,13 @@ diagnostic bundle:: Often misstated _diagnostics bundle_, the singular is prefer
 
 full text / full-text:: Only and always hyphenate as a modifier, ex: “full-text search”, but “search the full text”.
 
-Hadoop:: _Apache Hadoop_ on first mention. Use _Hadoop_ to convey introductory meaning (ex: “Rocana takes advantage of Hadoop infrastructure,” but defer to _CDH_ (Cloudera’s Hadoop distribution) when in specific instructions (ex: “Rocana requires CDH 5.4 or higher.”) This will change as we engage competing Hadoop technologies.
+Hadoop:: _Apache Hadoop_ on first mention. Use _Hadoop_ to convey introductory meaning (ex: Okera integrates with your existing Hadoop infrastructure”), but defer to _CDH_ (Cloudera’s Hadoop distribution) when in specific instructions (ex: Okera requires CDH 5.4 or higher.”)
 
 large scale / large-scale:: Only and always hyphenate as a modifier, ex: “large-scale operation”, but “operating on a large scale”.
 
 NameNode:: Always camel case in the Hadoop context.
+
+OAuth:: The authentication standard.
 
 open source / open-source:: Some “code is open source”, which makes it “open-source code”.
 
@@ -323,6 +339,7 @@ ZooKeeper:: _Apache ZooKeeper_ on first mention. Always upper camelcase except i
 Avoid using the terms _host_, _server_, _node_, and _machine_ without distinction.
 Each has a nuanced definition and should be used appropriately.
 
+[.dl-horizontal.glossary]
 host:: An entity that runs server software (box, instance, container, etc)
 
 machine:: A physical computer, usually 1:1 with a host
@@ -340,21 +357,13 @@ It is not a good idea to use _server_ to refer to a host, machine, or node, nor 
 Instead, use _service_ to indicate a process clients interface with.
 
 A _machine_ should be used when it could be a host or a local computer.
-For instance, “You'll need to perform this for any machine you want to run the Okera CLI tool,” since the tool can be run on your laptop or on the Deployment Manager host.
+For instance, “You'll need to perform this for any machine you want to run the odacm tool,” since the tool can be run on your laptop or on the Deployment Manager host.
 
 Here are some terms that should typically conform as written.
 
 * EC2 _instance_
 * Deployment Manager _node_
 * Catalog _service_
-
-=== CLI Terms
-
-A command-line interface involves carefully named elements, starting with.
-[source,shell]
-----
-prompt$ command --option argument
-----
 
 === Examples and Code Listings
 
@@ -367,6 +376,14 @@ Rather than including a description of or introduction to an example in the prec
 ```shell
 echo "This is for you to see how to make a code listing with an example heading."
 ```
+----
+
+==== CLI Listing Format
+
+A command-line interface involves carefully named elements, starting with.
+[source,shell]
+----
+prompt$ command --option argument
 ----
 
 Shell commands are displayed Markdown like so:
