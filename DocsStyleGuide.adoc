@@ -103,8 +103,9 @@ In Markdown, format numbers like so:
    This helps when you need to rearrange steps in the future, so you won't have to manually renumber.
 1. Demonstrate commands and code listings with examples.
    ```shell
-   echo "Shell commands always start with ```shell notation"
+   echo "Shell commands always start with \`\`\`shell notation"
    echo "Note the 3 spaces, adhering this listing to the associated step."
+   ```
 1. Illustrate relevant steps with screenshots.
    !(assets/images/docs-style-instruction-steps.png)
 ----
@@ -301,7 +302,7 @@ ZooKeeper:: _Apache ZooKeeper_ on first mention. Always upper camelcase except i
 
 === A Note on Capitalizations
 
-Proper nouns above 
+Proper nouns above
 
 === Special Terms
 
