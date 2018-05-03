@@ -42,6 +42,8 @@ Yet each subsequent line the sentence soft-wraps onto indents one space from the
 
 image::assets/images/docs-style-hanging-indent.png[width="500"]
 
+The third advantage offered by this method over arbitrary line lengths (like 90 characters) is that you do not have to reflow the text whenever you add or remove words in the middle of a paragraph.
+
 If you are unconvinced, link:https://asciidoctor.org/docs/asciidoc-recommended-practices/#one-sentence-per-line[read this].
 
 [[literals]]
@@ -257,17 +259,6 @@ Note the lack of a colon and the extra line.
 
 Admonitions can be `**Note:**`, `**Tip:**`, or `**Warning:**`.
 Each will be rendered in its own style to stand out from the page.
-
-The output is set up to render these as admonition blocks, something like:
-
-.Example admonition
-====
-[WARNING]
-.Warning
-A longer admonition.
-Note the lack of a colon and the extra line.
-
-====
 
 [[terms-and-components]]
 == Terms and Components
